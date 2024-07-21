@@ -20,7 +20,7 @@ def gkey(e):
     elif k == "Return" and scene == "result":
         scene = "title"
         main()
-    elif k == "r" and (scene == "game" or scene == "select"):
+    elif k == "r" and (scene == "game" or scene == "select" or scene == "show"):
         scene = "result"
         main()
     elif (k == "1" or k == "2" or k == "3") and scene == "game":
@@ -83,6 +83,7 @@ def select():
 #結果をプレイヤーに見せる関数show
 def show():
     global GetC, Att, scene
+    scene = "show"
     cvs.delete("QUE")
     cvs.delete("DEC")
     for i in range(3):
